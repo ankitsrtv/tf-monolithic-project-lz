@@ -1,0 +1,14 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - feature/dev
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello
+        run: echo "Hello Ankit, GitHub Action chal gaya!"
