@@ -10,5 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls
+
       - name: Print Hello
-        run: echo "Hello Ankit, GitHub Action chal gaya!"
+        run: echo "Hello Ankit, Repository successfully checkout"
