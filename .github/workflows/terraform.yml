@@ -25,6 +25,12 @@ jobs:
       - name: Print Hello
         run: echo "Hello Ankit, Repository successfully checkout"
 
+      - name: Setup Terraform
+        uses: hshicorp/setup-terraform@v3
+
+      - name: Check Terraform Version
+        run: terraform version
+
       - name: Installing Azure Cloud Provider
         working-directory: environments/pre-prod
         run: terraform init
