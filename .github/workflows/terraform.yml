@@ -39,4 +39,5 @@ jobs:
         run: terraform validate
 
       - name: Show Plan
+        working-directory: environments/pre-prod
         run: terraform plan
