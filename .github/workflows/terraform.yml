@@ -34,3 +34,9 @@ jobs:
       - name: Installing Azure Cloud Provider
         working-directory: environments/pre-prod
         run: terraform init
+
+      - name: Validating Terraform Code
+        run: terraform validate
+
+      - name: Show Plan
+        run: terraform plan
