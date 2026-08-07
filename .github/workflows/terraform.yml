@@ -24,3 +24,7 @@ jobs:
 
       - name: Print Hello
         run: echo "Hello Ankit, Repository successfully checkout"
+
+      - name: Installing Azure Cloud Provider
+        working-directory: /environments/pre-prod
+        run: terraform init
