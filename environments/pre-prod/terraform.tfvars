@@ -68,8 +68,8 @@ pips = {
     resource_group_name = "rg-test"
     allocation_method   = "Static"
   }
-  appgw_pip1 = {
-    name                = "appgw-pip"
+  bastion_pip1 = {
+    name                = "bastion-pip"
     resource_group_name = "rg-test"
     allocation_method   = "Static"
   }
@@ -87,28 +87,28 @@ vms = {
     admin_username                = "ankitsrtv"
     admin_password                = "Ankit@072026"
   }
-  vm2 = {
-    nic_name                      = "backend-nic"
-    resource_group_name           = "rg-test"
-    ip_name                       = "backend-ip"
-    subnet_name                   = "backend-subnet"
-    virtual_network_name          = "vnet-test"
-    private_ip_address_allocation = "Dynamic"
-    vm_name                       = "backend-vm"
-    admin_username                = "ankitsrtv"
-    admin_password                = "Ankit@072026"
-  }
-  vm3 = {
-    nic_name                      = "database-nic"
-    resource_group_name           = "rg-test"
-    ip_name                       = "database-ip"
-    subnet_name                   = "database-subnet"
-    virtual_network_name          = "vnet-test"
-    private_ip_address_allocation = "Dynamic"
-    vm_name                       = "database-VM"
-    admin_username                = "ankitsrtv"
-    admin_password                = "Ankit@072026"
-  }
+  # vm2 = {
+  #   nic_name                      = "backend-nic"
+  #   resource_group_name           = "rg-test"
+  #   ip_name                       = "backend-ip"
+  #   subnet_name                   = "backend-subnet"
+  #   virtual_network_name          = "vnet-test"
+  #   private_ip_address_allocation = "Dynamic"
+  #   vm_name                       = "backend-vm"
+  #   admin_username                = "ankitsrtv"
+  #   admin_password                = "Ankit@072026"
+  # }
+  # vm3 = {
+  #   nic_name                      = "database-nic"
+  #   resource_group_name           = "rg-test"
+  #   ip_name                       = "database-ip"
+  #   subnet_name                   = "database-subnet"
+  #   virtual_network_name          = "vnet-test"
+  #   private_ip_address_allocation = "Dynamic"
+  #   vm_name                       = "database-VM"
+  #   admin_username                = "ankitsrtv"
+  #   admin_password                = "Ankit@072026"
+  # }
 }
 
 bastion = {
@@ -153,28 +153,28 @@ nat_subnet_assoc = {
   }
 }
 
-lbs = {
-  lb1 = {
-    lb_name             = "app-lb"
-    resource_group_name = "rg-test"
-    pip_name            = "lb-pip"
-    frontend_ip_name    = "lb-frontend-ip"
-    backend_pool_name   = "lb-backend-pool"
-    probe_name          = "http-probe"
-    probe_port          = 80
-    rule_name           = "http-rule"
-    frontend_port       = 80
-    backend_port        = 80
-    backend_nics = {
-      nic1 = {
-        nic_name            = "frontend-nic"
-        resource_group_name = "rg-test"
-      }
-      nic2 = {
-        nic_name            = "backend-nic"
-        resource_group_name = "rg-test"
-      }
-    }
-  }
-}
+# lbs = {
+#   lb1 = {
+#     lb_name             = "app-lb"
+#     resource_group_name = "rg-test"
+#     pip_name            = "lb-pip"
+#     frontend_ip_name    = "lb-frontend-ip"
+#     backend_pool_name   = "lb-backend-pool"
+#     probe_name          = "http-probe"
+#     probe_port          = 80
+#     rule_name           = "http-rule"
+#     frontend_port       = 80
+#     backend_port        = 80
+#     backend_nics = {
+#       nic1 = {
+#         nic_name            = "frontend-nic"
+#         resource_group_name = "rg-test"
+#       }
+#       nic2 = {
+#         nic_name            = "backend-nic"
+#         resource_group_name = "rg-test"
+#       }
+#     }
+#   }
+# }
 
