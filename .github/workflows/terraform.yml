@@ -43,6 +43,6 @@ jobs:
       - name: Validating Terraform Code
         run: terraform validate
 
-      # - name: Show Plan
-      #   working-directory: environments/pre-prod
-      #   run: terraform plan
+      - name: Show Plan
+        working-directory: environments/pre-prod
+        run: terraform plan
