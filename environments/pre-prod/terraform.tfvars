@@ -4,10 +4,10 @@ rgs = {
     location = "centralindia"
   }
 
-  rg2 = {
-    name     = "rg-dev"
-    location = "centralindia"
-  }
+  # rg2 = {
+  #   name     = "rg-dev"
+  #   location = "centralindia"
+  # }
 }
 
 vnets = {
@@ -17,11 +17,11 @@ vnets = {
     address_space       = ["10.0.0.0/16"]
   }
 
-  vnet2 = {
-    name                = "vnet-prod"
-    resource_group_name = "rg-dev"
-    address_space       = ["11.0.0.0/16"]
-  }
+  # vnet2 = {
+  #   name                = "vnet-prod"
+  #   resource_group_name = "rg-dev"
+  #   address_space       = ["11.0.0.0/16"]
+  # }
 }
 
 subnets = {
