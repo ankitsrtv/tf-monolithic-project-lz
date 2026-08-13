@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - feature/dev
+      - feature/conflict
+  
+  pull_request:
+    branches:
+      - main
 
 jobs:
   hello:
