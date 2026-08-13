@@ -1,0 +1,48 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - feature/dev
+      - feature/conflict
+  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Show Git Status
+        run: git status
+
+      - name: Print Hello
+        run: echo "Hello Ankit, Repository successfully checkout"
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Check Terraform Version
+        run: terraform version
+
+      - name: Installing Azure Cloud Provider
+        working-directory: environments/pre-prod
+        run: terraform init
+
+      - name: Validating Terraform Code
+        run: terraform validate
+
+      # - name: Show Plan
+      #   working-directory: environments/pre-prod
+      #   run: terraform plan
