@@ -51,7 +51,7 @@ jobs:
 
       - name: Show Plan
         working-directory: environments/pre-prod
-        run: terraform plan no-color
+        run: terraform plan -no-color
 
       - name: Apply Changes
         working-directory: environments/pre-prod
