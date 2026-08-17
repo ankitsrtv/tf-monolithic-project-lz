@@ -1,58 +1,58 @@
-name: My First GitHub Action
+# name: My First GitHub Action
 
-on:
-  push:
-    branches:
-      - feature/dev
-      - feature/conflict
+# on:
+#   push:
+#     branches:
+#       - feature/dev
+#       - feature/conflict
   
-  pull_request:
-    branches:
-      - main
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  hello:
-    runs-on: ubuntu-latest
+# jobs:
+#   hello:
+#     runs-on: ubuntu-latest
 
-    env:
-      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+#     env:
+#       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+#       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+#       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+#       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
 
-      - name: Show Current Directory
-        run: pwd
+#       - name: Show Current Directory
+#         run: pwd
 
-      - name: List Files
-        run: ls -la
+#       - name: List Files
+#         run: ls -la
 
-      - name: Show Git Status
-        run: git status
+#       - name: Show Git Status
+#         run: git status
 
-      - name: Print Hello
-        run: echo "Hello Ankit, Repository successfully checkout"
+#       - name: Print Hello
+#         run: echo "Hello Ankit, Repository successfully checkout"
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+#       - name: Setup Terraform
+#         uses: hashicorp/setup-terraform@v3
 
-      - name: Check Terraform Version
-        run: terraform version
+#       - name: Check Terraform Version
+#         run: terraform version
 
-      - name: Installing Azure Cloud Provider
-        working-directory: environments/pre-prod
-        run: terraform init
+#       - name: Installing Azure Cloud Provider
+#         working-directory: environments/pre-prod
+#         run: terraform init
 
-      - name: Validating Terraform Code
-        run: terraform validate
+#       - name: Validating Terraform Code
+#         run: terraform validate
 
-      - name: Show Plan
-        working-directory: environments/pre-prod
-        run: terraform plan -no-color
+#       - name: Show Plan
+#         working-directory: environments/pre-prod
+#         run: terraform plan -no-color
 
-      - name: Apply Changes
-        working-directory: environments/pre-prod
-        run: terraform apply --auto-approve
+#       - name: Apply Changes
+#         working-directory: environments/pre-prod
+#         run: terraform apply --auto-approve
