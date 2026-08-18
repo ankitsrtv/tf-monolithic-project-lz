@@ -22,6 +22,6 @@ variable "nat_gateways" {
 variable "nat_subnet_assoc" {
   type = map(any)
 }
-variable "lbs" {
-  type = map(any)
-}
+# variable "lbs" {
+#   type = map(any)
+# }

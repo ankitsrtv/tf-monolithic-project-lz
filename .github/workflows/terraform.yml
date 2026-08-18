@@ -1,10 +1,9 @@
 name: My First GitHub Action
 
 on:
-  push:
-    branches:
-      - feature/dev
-      - feature/conflict
+  # push:
+  #   branches:
+  #     - feature/*
   
   pull_request:
     branches:
@@ -13,6 +12,12 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+
+    env:
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     steps:
       - name: Checkout Repository
@@ -43,6 +48,10 @@ jobs:
       - name: Validating Terraform Code
         run: terraform validate
 
-      # - name: Show Plan
+      - name: Show Plan
+        working-directory: environments/pre-prod
+        run: terraform plan -no-color
+
+      # - name: Apply Changes
       #   working-directory: environments/pre-prod
-      #   run: terraform plan
+      #   run: terraform apply --auto-approve
