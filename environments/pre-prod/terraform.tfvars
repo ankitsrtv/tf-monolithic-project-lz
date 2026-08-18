@@ -2,7 +2,7 @@ rgs = {
   rg1 = {
     name     = "rg-test"
     location = "centralindia"
-  
+  }
 
   # rg2 = {
   #   name     = "rg-dev"
