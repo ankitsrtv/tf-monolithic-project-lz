@@ -52,6 +52,7 @@ jobs:
         working-directory: environments/pre-prod
         run: terraform plan -no-color
 
-      # - name: Apply Changes
-      #   working-directory: environments/pre-prod
-      #   run: terraform apply --auto-approve
+      - name: Apply Changes
+       if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'main'
+        working-directory: environments/pre-prod
+        run: terraform apply --auto-approve
