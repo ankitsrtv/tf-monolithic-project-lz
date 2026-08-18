@@ -31,30 +31,30 @@ subnets = {
     virtual_network_name = "vnet-test"
     address_prefixes     = ["10.0.1.0/24"]
   }
-  subnet2 = {
-    name                 = "backend-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    address_prefixes     = ["10.0.2.0/24"]
-  }
-  subnet3 = {
-    name                 = "AzureBastionSubnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    address_prefixes     = ["10.0.3.0/24"]
-  }
-  subnet4 = {
-    name                 = "database-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    address_prefixes     = ["10.0.4.0/24"]
-  }
-  subnet5 = {
-    name                 = "appgw-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    address_prefixes     = ["10.0.5.0/24"]
-  }
+  # subnet2 = {
+  #   name                 = "backend-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   address_prefixes     = ["10.0.2.0/24"]
+  # }
+  # subnet3 = {
+  #   name                 = "AzureBastionSubnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   address_prefixes     = ["10.0.3.0/24"]
+  # }
+  # subnet4 = {
+  #   name                 = "database-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   address_prefixes     = ["10.0.4.0/24"]
+  # }
+  # subnet5 = {
+  #   name                 = "appgw-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   address_prefixes     = ["10.0.5.0/24"]
+  # }
 }
 
 pips = {
@@ -63,16 +63,16 @@ pips = {
     resource_group_name = "rg-test"
     allocation_method   = "Static"
   }
-  lb_pip1 = {
-    name                = "lb-pip"
-    resource_group_name = "rg-test"
-    allocation_method   = "Static"
-  }
-  bastion_pip1 = {
-    name                = "bastion-pip"
-    resource_group_name = "rg-test"
-    allocation_method   = "Static"
-  }
+  # lb_pip1 = {
+  #   name                = "lb-pip"
+  #   resource_group_name = "rg-test"
+  #   allocation_method   = "Static"
+  # }
+  # bastion_pip1 = {
+  #   name                = "bastion-pip"
+  #   resource_group_name = "rg-test"
+  #   allocation_method   = "Static"
+  # }
 }
 
 vms = {
@@ -112,45 +112,45 @@ vms = {
 }
 
 bastion = {
-  bastion = {
-    name                 = "AzureBastion"
-    location             = "centralindia"
-    resource_group_name  = "rg-test"
-    ip_name              = "configuration"
-    subnet_name          = "AzureBastionSubnet"
-    virtual_network_name = "vnet-test"
-    pip_name             = "bastion-pip"
-  }
+  # bastion = {
+  #   name                 = "AzureBastion"
+  #   location             = "centralindia"
+  #   resource_group_name  = "rg-test"
+  #   ip_name              = "configuration"
+  #   subnet_name          = "AzureBastionSubnet"
+  #   virtual_network_name = "vnet-test"
+  #   pip_name             = "bastion-pip"
+  # }
 }
 
 nat_gateways = {
-  nat_gw1 = {
-    nat_gateway_name     = "natgw-test"
-    pip_name             = "natgw-pip"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-  }
+  # nat_gw1 = {
+  #   nat_gateway_name     = "natgw-test"
+  #   pip_name             = "natgw-pip"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  # }
 }
 
 nat_subnet_assoc = {
-  nsa1 = {
-    subnet_name          = "frontend-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    nat_gw               = "nat_gw1"
-  }
-  nsa2 = {
-    subnet_name          = "backend-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    nat_gw               = "nat_gw1"
-  }
-  nsa3 = {
-    subnet_name          = "database-subnet"
-    resource_group_name  = "rg-test"
-    virtual_network_name = "vnet-test"
-    nat_gw               = "nat_gw1"
-  }
+  # nsa1 = {
+  #   subnet_name          = "frontend-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   nat_gw               = "nat_gw1"
+  # }
+  # nsa2 = {
+  #   subnet_name          = "backend-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   nat_gw               = "nat_gw1"
+  # }
+  # nsa3 = {
+  #   subnet_name          = "database-subnet"
+  #   resource_group_name  = "rg-test"
+  #   virtual_network_name = "vnet-test"
+  #   nat_gw               = "nat_gw1"
+  # }
 }
 
 # lbs = {
