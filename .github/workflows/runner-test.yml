@@ -22,7 +22,7 @@ jobs:
         run: pwd
 
       - name: check list of Files
-        run: ls -Force
+        run: ls
 
       - name: Initializing Cloud Provider
         working-directory: environments/pre-prod
