@@ -22,4 +22,8 @@ jobs:
         run: pwd
 
       - name: check list of Files
-        run: ls -la
+        run: ls -Force
+
+      - name: Initializing Cloud Provider
+        working-directory: /environments/pre-prod
+        run: terraform init
