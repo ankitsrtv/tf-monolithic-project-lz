@@ -15,6 +15,5 @@ jobs:
           hostname
           echo "Operating System:"
 
-      - name: terraform init
-        working-directory: environments/pre-prod
-        run: terraform init
+      - name: check terraform version
+        run: terraform version
