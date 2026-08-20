@@ -17,3 +17,9 @@ jobs:
 
       - name: check terraform version
         run: terraform version
+
+      - name: check current Repository
+        run: pwd
+
+      - name: check list of Files
+        run: ls -la
