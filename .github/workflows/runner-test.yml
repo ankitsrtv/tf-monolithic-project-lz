@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: check list of Files
-        run: ls
+        run: ls -Force
 
       - name: Initializing Cloud Provider
         working-directory: environments/pre-prod
