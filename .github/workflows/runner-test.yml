@@ -18,8 +18,11 @@ jobs:
       - name: check terraform version
         run: terraform version
 
-      - name: check current Repository
+      - name: current working directory
         run: pwd
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: check list of Files
         run: ls
