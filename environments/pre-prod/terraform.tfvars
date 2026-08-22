@@ -76,17 +76,17 @@ pips = {
 }
 
 vms = {
-  vm1 = {
-    nic_name                      = "frontend-nic"
-    resource_group_name           = "rg-test"
-    ip_name                       = "frontend-ip"
-    subnet_name                   = "frontend-subnet"
-    virtual_network_name          = "vnet-test"
-    private_ip_address_allocation = "Dynamic"
-    vm_name                       = "frontend-vm"
-    admin_username                = "ankitsrtv"
-    admin_password                = "Ankit@072026"
-  }
+  # vm1 = {
+  #   nic_name                      = "frontend-nic"
+  #   resource_group_name           = "rg-test"
+  #   ip_name                       = "frontend-ip"
+  #   subnet_name                   = "frontend-subnet"
+  #   virtual_network_name          = "vnet-test"
+  #   private_ip_address_allocation = "Dynamic"
+  #   vm_name                       = "frontend-vm"
+  #   admin_username                = "ankitsrtv"
+  #   admin_password                = "Ankit@072026"
+  # }
   # vm2 = {
   #   nic_name                      = "backend-nic"
   #   resource_group_name           = "rg-test"
